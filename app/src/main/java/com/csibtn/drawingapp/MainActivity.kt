@@ -1,11 +1,12 @@
 package com.csibtn.drawingapp
 
+import android.app.AlertDialog
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
-import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import com.csibtn.drawingapp.databinding.ActivityMainBinding
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawingView : DrawingView
     private lateinit var binder : ActivityMainBinding
     private lateinit var imageButtonCurrentColor : ImageButton
+    private lateinit var requestPermission : ActivityResultLauncher<Array<String>>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,5 +67,13 @@ class MainActivity : AppCompatActivity() {
             imageButtonCurrentColor.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.pallet))
             imageButtonCurrentColor = imageButton
         }
+    }
+    private fun showRationaleDialog(title : String, message : String){
+        val builder = AlertDialog.Builder(this).apply{
+        setTitle(title)
+        setMessage(message)
+        setPositiveButton("Cancel") {dialog, _ -> dialog.dismiss()}
+        }
+        builder.create().show()
     }
 }
