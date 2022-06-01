@@ -6,8 +6,11 @@
         <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/drawable/background_drawing_view.xml" value="0.245" />
         <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/drawable/large.xml" value="0.1015" />
         <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/drawable/medium.xml" value="0.1015" />
+        <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/drawable/pallet.xml" value="0.1015" />
+        <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/drawable/palletPressed.xml" value="0.1015" />
+        <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/drawable/pallet_pressed.xml" value="0.1015" />
         <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/drawable/small.xml" value="0.1015" />
-        <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/layout/activity_main.xml" value="0.14739583333333334" />
+        <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/layout/brush_size.xml" value="0.2713541666666667" />
         <entry key="..\:/Users/ichig/DrawingApp/app/src/main/res/layout/dialog_brush_size.xml" value="0.1" />
       </map>

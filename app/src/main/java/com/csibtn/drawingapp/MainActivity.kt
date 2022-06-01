@@ -3,12 +3,17 @@ package com.csibtn.drawingapp
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
+import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.view.get
 import com.csibtn.drawingapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var drawingView : DrawingView
     private lateinit var binder : ActivityMainBinding
+    private lateinit var imageButtonCurrentColor : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +23,9 @@ class MainActivity : AppCompatActivity() {
         drawingView = binder.drawingView
 
         drawingView.setSizeForBrush(30f)
-
+        val linearLayout = binder.llColors
+        imageButtonCurrentColor = linearLayout[0] as ImageButton
+        imageButtonCurrentColor.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.pallet_pressed))
 
         brushBtn.setOnClickListener{
             showBrushSizeDialog()
@@ -47,5 +54,16 @@ class MainActivity : AppCompatActivity() {
             brushDialog.dismiss()
         }
         brushDialog.show()
+    }
+
+    fun paintClicked(view: View){
+        if(view != imageButtonCurrentColor){
+            val imageButton = view as ImageButton
+            val colorTag = imageButton.tag.toString()
+            drawingView.setColor(colorTag)
+            imageButton.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.pallet_pressed))
+            imageButtonCurrentColor.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.pallet))
+            imageButtonCurrentColor = imageButton
+        }
     }
 }

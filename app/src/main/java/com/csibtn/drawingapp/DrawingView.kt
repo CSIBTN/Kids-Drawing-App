@@ -89,4 +89,8 @@ class DrawingView(context : Context, attrs : AttributeSet) : View(context, attrs
         resources.displayMetrics)
         drawingPaint.strokeWidth = brushSize
     }
+    fun setColor(newColor : String){
+        color =  Color.parseColor(newColor)
+        drawingPaint.color = color
+    }
 }
