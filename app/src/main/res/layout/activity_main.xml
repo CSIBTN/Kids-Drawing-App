@@ -171,6 +171,14 @@
             android:src="@drawable/gallery" />
 
         <ImageButton
+            android:id="@+id/ib_undo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/undo" />
+
+        <ImageButton
             android:id="@+id/ib_brushPick"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -178,7 +186,16 @@
             android:scaleType="fitXY"
             android:src="@drawable/brush" />
 
+        <ImageButton
+            android:id="@+id/ib_save"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/save" />
 
 
-</LinearLayout>
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

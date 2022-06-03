@@ -93,4 +93,10 @@ class DrawingView(context : Context, attrs : AttributeSet) : View(context, attrs
         color =  Color.parseColor(newColor)
         drawingPaint.color = color
     }
+    fun undo(){
+        if(paths.size > 0) {
+            paths.removeAt(paths.lastIndex)
+            invalidate()
+        }
+    }
 }
